@@ -40,6 +40,17 @@ class ViewController: UIViewController {
     }
     
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath){
+            if cell.accessoryType == .checkmark{
+                cell.accessoryType = .none
+                
+            }
+            else{
+                cell.accessoryType = .checkmark
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
